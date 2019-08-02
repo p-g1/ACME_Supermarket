@@ -37,19 +37,20 @@ const pricingRules = {
 
 class Basket {
     constructor(pricingRules) {
-    
-    this.shoppingBasket = [];
-
-    this.add = item => {
-        this.shoppingBasket.push(item);
+        this.pricingRules = pricingRules; 
+        this.contents = [];
     }
 
-    this.total = () => {
-        const uniqueBasketItems = [...new Set(this.shoppingBasket)];
+    add(item) {
+        this.contents.push(item);
+    }
+
+    total() {
+        const uniqueBasketItems = [...new Set(this.contents)];
         let total = 0;
 
         uniqueBasketItems.forEach(item => {
-            const itemCount = this.shoppingBasket.filter(basketItem => basketItem === item).length;
+            const itemCount = this.contents.filter(basketItem => basketItem === item).length;
             const twoForOneResult = pricingRules.twoForOneChecker(item);
             const multibuyResult = pricingRules.multibuyChecker(item, itemCount);
             const price = pricingRules.items.filter(object => object.code === item)[0].price;
@@ -64,4 +65,5 @@ class Basket {
         return "£" + total.toFixed(2);
         }
     }
-}
+
+module.exports = { Basket, pricingRules };

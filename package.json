@@ -1,0 +1,25 @@
+{
+  "name": "acme_supermarket",
+  "version": "1.0.0",
+  "description": "Open HTML file in browser.",
+  "main": "ACME_Supermarket.js",
+  "scripts": {
+    "test": "nyc mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petegarvin1/ACME_Supermarket.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petegarvin1/ACME_Supermarket/issues"
+  },
+  "homepage": "https://github.com/petegarvin1/ACME_Supermarket#readme",
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  },
+  "dependencies": {
+    "nyc": "^14.1.1"
+  }
+}
