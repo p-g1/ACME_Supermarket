@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/petegarvin1/ACME_Supermarket#readme",
   "devDependencies": {
-    "mocha": "^6.2.0"
+    "mocha": "^10.2.0"
   },
   "dependencies": {
     "nyc": "^14.1.1"
